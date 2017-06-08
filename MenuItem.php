@@ -28,7 +28,7 @@ class MenuItem
 
     public function a($options = [], $content = null)
     {
-        return Html::a($content !== null ? $content : $this->label, array_merge($options, $this->options));
+        return Html::a($content !== null ? $content : $this->label, $this->url, array_merge($options, $this->options));
     }
 
     public function isActive()
