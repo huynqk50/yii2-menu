@@ -28,4 +28,29 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \vanquyet\menu\AutoloadExample::widget(); ?>```
+use vanquyet\menu\Menu;
+$menu = new Menu();
+$menu->init(
+    [
+        'info' => [
+            'homePage' => [
+                'label' => 'Trang chủ',
+                'url' => Yii::$app->homeUrl,
+                'parentKey' => null
+            ],
+            'aboutPage' => [
+                'label' => 'Giới thiệu',
+                'url' => Url::to(['site/about']),
+                'parentKey' => null
+            ],
+            'teachers' => [
+                'label' => 'Giáo viên',
+                'url' => '#',
+                'parentKey' => 'aboutPage'
+            ]
+        ]
+    ]
+);
+
+var_dump($menu->getRootItems());
+```
