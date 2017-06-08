@@ -60,7 +60,6 @@ class MenuItem
             $result = null;
             foreach ($this->menu->data as $item) {
                 if ($item->key === $this->parentKey) {
-                    $result = $item;
                     return $item;
                     break;
                 }

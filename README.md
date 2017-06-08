@@ -35,12 +35,12 @@ $menu->init(
         'info' => [
             'homePage' => [
                 'label' => 'Trang chủ',
-                'url' => Yii::$app->homeUrl,
+                'url' => Url::home(true),
                 'parentKey' => null
             ],
             'aboutPage' => [
                 'label' => 'Giới thiệu',
-                'url' => Url::to(['site/about']),
+                'url' => Url::to(['site/about'], true),
                 'parentKey' => null
             ],
             'teachers' => [
