@@ -37,7 +37,7 @@ class Menu
 //        if ($topParents === false || !$this->enableCache) {
             $topParents = [];
             foreach ($this->data as $key => $item) {
-                if ($item->getParent() === null) {
+                if ($item->parentKey === null) {
                     $topParents[$key] = $item;
                 }
             }
